@@ -69,7 +69,39 @@ let e : {
 }
 
 e = {
-    name: 'Rakib',
-    age: 20,
-    isStudent: true
-}; // here I can't set other property in this object.
+    name: 'Rakib', // Here we can only set string value. 
+    age: 20, // Here we can only set number value. 
+    isStudent: true // Here we can only set boolean value. 
+}; // here I can't set other property in this object. 
+
+let f:any; // That means it will accept any types of value. 
+
+
+//Function Type
+
+let myFunc: Function; // That means this can only accept functions.
+
+const minus = (num1: number, num2: number, num3?: number): number => {
+    return (num1 - num2)
+}
+
+minus(10, 20)
+
+//We can explicitly set what should the function return like this.
+//const sum = (num1: number, num2: number):number means this will return only number// this number  => {
+
+// }
+
+
+
+// Types Aliases
+
+type numberOrString = number | string;
+type userType = {
+    name: string,
+    age: number
+}
+
+const userDetails = (id: numberOrString, user: userType) => {
+    return user;
+}
